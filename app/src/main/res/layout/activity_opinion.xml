@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.heisenberg.beherchange.Opinion">
+
+
+<!--    <ImageView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:src="@drawable/gradient"></ImageView>-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Report an incident"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="35dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="80dp"
+            android:id="@+id/opi_label2"
+            android:fontFamily="sans-serif"/>
+
+        <AutoCompleteTextView
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:hint="Enter Location"
+            android:id="@+id/opinion_autocomplete"
+            android:textSize="20dp"
+            android:maxLines="1"
+            android:textColorHint="#ccc"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_below="@id/opi_label2"
+            android:fontFamily="sans-serif-condensed"
+            android:drawableLeft="@drawable/bluecircle"
+            android:layout_marginTop="45dp"
+            android:drawablePadding="20dp"
+            android:layout_marginLeft="45dp"
+            android:layout_marginRight="45dp"
+            android:padding="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="I'm recording about"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="45dp"
+            android:paddingTop="5dp"
+            android:textSize="20dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:id="@+id/opi_label3"
+            android:fontFamily="sans-serif"
+            android:layout_below="@+id/opinion_autocomplete"/>
+
+        <Spinner
+            android:id="@+id/report_about_spinner"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/opi_label3"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="45dp"
+            android:layout_marginBottom="10dp"
+            />
+
+        <TextView
+            android:id="@+id/opi_label4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/desc_report"
+            android:layout_below="@+id/report_about_spinner"
+            android:fontFamily="sans-serif"
+            android:layout_marginTop="20dp"
+            android:text="Description"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="20dp" />
+
+        <EditText
+            android:id="@+id/desc_report"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="45dp"
+            android:layout_below="@+id/opi_label4"
+            android:inputType="text|textMultiLine"
+            android:textColor="@color/colorPrimaryDark"
+            android:gravity="top"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="We guarentee that your identity will remain confidential!"
+            android:padding="10dp"
+            android:layout_below="@+id/desc_report"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:fontFamily="sans-serif"
+            android:layout_marginLeft="45dp"
+            android:layout_marginRight="45dp"
+            android:id="@+id/opi_label1"
+            android:textSize="20dp"/>
+
+
+    </RelativeLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit Report"
+        android:textColor="@color/colorPrimaryDark"
+        android:background="@drawable/buttonstyle2"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:id="@+id/submitOpinion" />
+
+</RelativeLayout>

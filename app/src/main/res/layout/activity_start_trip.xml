@@ -1,0 +1,84 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".StartTrip"
+    android:background="#fff">
+
+
+    <!--<fragment-->
+        <!--android:id="@+id/place_autocomplete_fragment"-->
+        <!--android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content" />-->
+
+    <AutoCompleteTextView
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:hint="Enter Source"
+        android:id="@+id/source_editText"
+        android:textSize="20dp"
+        android:maxLines="1"
+        android:textColorHint="#ccc"
+        android:textColor="@color/colorPrimary"
+        android:background="@color/white"
+        android:fontFamily="sans-serif-condensed"
+        android:drawableLeft="@drawable/bluecircle"
+        android:layout_margin="5dp"
+        android:drawablePadding="20dp"
+        android:padding="5sp"/>
+
+    <AutoCompleteTextView
+        android:id="@+id/place_editText"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/source_editText"
+        android:layout_margin="5dp"
+        android:background="@color/white"
+        android:drawableLeft="@drawable/redcircle"
+        android:drawablePadding="20dp"
+        android:fontFamily="sans-serif-condensed"
+        android:layout_marginLeft="5dp"
+        android:hint="Enter Destination"
+        android:maxLines="1"
+        android:padding="5sp"
+        android:textColor="@color/colorPrimary"
+        android:textColorHint="#ccc"
+        android:textSize="20dp" />
+
+    <at.markushi.ui.CircleButton
+        android:id="@+id/startTripButton"
+        app:cb_pressedRingWidth="8dip"
+        android:layout_width="56dip"
+        android:layout_height="56dip"
+        android:layout_below="@+id/webView"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/rightarrow_24dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="25dp"/>
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map_track"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/place_editText" />
+
+    <WebView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/webView"
+        android:visibility="invisible"/>
+    <WebView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/webView2"
+        android:visibility="invisible"/>
+
+</RelativeLayout>
